@@ -22,7 +22,7 @@ export default async function OrderPage({params}: { params: { category : string 
         Elige y personaliza tu pedido a continuación
       </Heading>
     
-      <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-4 gap-4 items-start">
+      <div className="grid grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4 items-start">
           {products.map(product => (
             <ProductCard 
               key={product.id}
@@ -30,7 +30,7 @@ export default async function OrderPage({params}: { params: { category : string 
             />
           ))}
       </div>
-    </>
+    </> 
   )
 }
 

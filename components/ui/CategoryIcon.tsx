@@ -9,13 +9,13 @@ type CategoryIconProps = {
 }
 
 export default function CategoryIcon({ category }: CategoryIconProps) {
-    const params = useParams<{category: string}>()
+    const params = useParams<{ category: string }>()
 
     return (
         <div
-            className={`${category.slug === params.category ? 'bg-amber-400' : ''} flex items-center gap-4 w-full border-t border-gray-200 p-3 last-of-type:border-b`}
+            className={`${category.slug === params.category ? 'bg-amber-400' : ''} flex flex-row items-center gap-2 md:gap-4 w-full border-t border-gray-200 p-3 last-of-type:border-b`}
         >
-            <div className="w-16 h-16 relative">
+            <div className="w-12 h-12 md:w-16 md:h-16 relative">
                 <Image
                     fill
                     src={`/icon_${category.slug}.svg`}
@@ -24,9 +24,11 @@ export default function CategoryIcon({ category }: CategoryIconProps) {
             </div>
 
             <Link
-                className="text-xl font-bold"
+                className="text-sm md:text-xl font-bold text-center md:text-left"
                 href={`/order/${category.slug}`}
-            >{category.name}</Link>
+            >
+                {category.name}
+            </Link>
         </div>
     )
 }
