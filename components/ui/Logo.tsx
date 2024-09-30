@@ -7,7 +7,7 @@ export default function Logo() {
             <Image
                 fill
                 alt="Logotipo Fresh Coffee"
-                src='/logo.svg'
+                src='/logo.png'
             />
         </div>
     </div>
